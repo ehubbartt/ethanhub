@@ -22,6 +22,10 @@
 		color: whitesmoke;
 	}
 
+	:global(.hidden) {
+		display: none;
+	}
+
 	main {
 		padding: 1rem;
 		height: 100%;

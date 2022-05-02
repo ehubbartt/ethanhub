@@ -12,7 +12,7 @@
 	);
 </script>
 
-<div class="landing">
+<div class="landing-section landing">
 	<div class="typewriter">
 		<Typewriter interval={randomIntervals} cascade={true} on:done={showContinue}>
 			<h1>Welcome to my blog!</h1>
@@ -29,15 +29,6 @@
 </div>
 
 <style>
-	.landing {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		height: 100%;
-		overflow: hidden;
-	}
-
 	.typewriter {
 		margin-top: auto;
 	}
@@ -60,6 +51,6 @@
 	}
 
 	.show {
-		transform: translateY(0);
+		transform: translateY(-5px);
 	}
 </style>
