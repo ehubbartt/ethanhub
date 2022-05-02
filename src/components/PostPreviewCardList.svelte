@@ -1,9 +1,13 @@
 <script>
+	import { posts } from './../constants/posts.js';
+	import { fade } from 'svelte/transition';
 	import PostPreviewCard from './PostPreviewCard.svelte';
 </script>
 
-<div class="card-container">
-	<PostPreviewCard />
+<div class="card-container" transition:fade>
+	{#each posts as post}
+		<PostPreviewCard {post} />
+	{/each}
 </div>
 
 <style>

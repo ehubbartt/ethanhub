@@ -1,20 +1,21 @@
 <script>
+	import { randomIntervalsGenerator } from './../util/randomIntervalsGenerator.js';
 	import Typewriter from 'svelte-typewriter';
 	import { ArrowDownIcon } from 'svelte-feather-icons';
 
 	export let showContinue;
 	export let handleContinueClick;
 	export let shouldShowContinue;
-	//genrate 5 random intervals between 20 and 100
-	const randomIntervals = Array.from(
-		{ length: 5 },
-		() => Math.floor(Math.random() * (100 - 20 + 1)) + 20
-	);
 </script>
 
 <div class="landing-section" id="landing">
 	<div class="typewriter">
-		<Typewriter interval={randomIntervals} cascade={true} on:done={showContinue} cursor={'white'}>
+		<Typewriter
+			interval={randomIntervalsGenerator(20, 100)}
+			cascade={true}
+			on:done={showContinue}
+			cursor={'white'}
+		>
 			<h1>Welcome to my blog!</h1>
 			<h2>You can find interactive poems and other content here.</h2>
 		</Typewriter>

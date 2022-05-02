@@ -1,24 +1,20 @@
 <script>
-	$: isFocused = false;
-
-	const handleFocus = () => {};
-
-	const handleNoFocus = () => {};
+	export let post;
 </script>
 
-<div class="card">
+<div class="card" tabindex="0">
 	<ul>
 		<li>
-			<h1>BLUE</h1>
+			<h1>{post.title}</h1>
 		</li>
 		<li class="list-info">
-			<p class="invisible">05/05/2020</p>
+			<p class="invisible">{post.date}</p>
 		</li>
 		<li>
-			<p class="invisible">A sad but short poem about the color blue</p>
+			<p class="invisible">{post.description}</p>
 		</li>
 		<li>
-			<p class="invisible">Poem: free-form</p>
+			<p class="invisible">{post.specificType}</p>
 		</li>
 	</ul>
 </div>
@@ -35,6 +31,7 @@
 		justify-content: center;
 		cursor: pointer;
 		overflow: hidden;
+		margin-bottom: 3rem;
 
 		transition: all 1s ease;
 	}
@@ -54,20 +51,24 @@
 		margin: 0;
 	}
 
-	.card:hover {
+	.card:hover,
+	.card:focus {
 		width: 80%;
 		background-color: hsla(0, 0%, 98%, 0.147);
 	}
 
-	.card:hover ul {
+	.card:hover ul,
+	.card:focus ul {
 		width: 0;
 	}
 
-	.card:hover p {
+	.card:hover p,
+	.card:focus p {
 		animation: fadeIn 0.5s forwards 1s;
 	}
 
-	.card:hover .list-info {
+	.card:hover .list-info,
+	.card:focus .list-info {
 		margin-top: 0;
 	}
 
