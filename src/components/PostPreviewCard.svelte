@@ -6,12 +6,12 @@
 	const handleNoFocus = () => {};
 </script>
 
-<div class="card" on:mouseenter={handleFocus} on:focus={handleFocus} on:mouseleave={handleNoFocus}>
+<div class="card">
 	<ul>
 		<li>
 			<h1>BLUE</h1>
 		</li>
-		<li>
+		<li class="list-info">
 			<p class="invisible">05/05/2020</p>
 		</li>
 		<li>
@@ -67,6 +67,14 @@
 		animation: fadeIn 0.5s forwards 1s;
 	}
 
+	.card:hover .list-info {
+		margin-top: 0;
+	}
+
+	.list-info {
+		margin-top: -72px;
+		transition: margin 1s ease;
+	}
 	.invisible {
 		opacity: 0;
 	}
