@@ -21,7 +21,7 @@
 			interval={randomIntervalsGenerator(100, 250)}
 			on:done={handleTypewriterDone}
 		>
-			<h1>Posts</h1>
+			<h1 class={shouldShowBlogList && 'underline'}>Posts</h1>
 		</Typewriter>
 	{/if}
 	{#if shouldShowPostList}
@@ -35,7 +35,34 @@
 		overflow: auto;
 	}
 
+	h1 {
+		margin: 0;
+	}
+
 	#blog-list {
 		align-items: center;
+	}
+
+	.underline {
+		position: relative;
+	}
+
+	.underline::after {
+		content: '' !important;
+		height: 2px;
+		background: whitesmoke;
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+		animation: growWidth 1s ease forwards;
+	}
+
+	@keyframes growWidth {
+		0% {
+			width: 0;
+		}
+		100% {
+			width: 100%;
+		}
 	}
 </style>

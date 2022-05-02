@@ -31,7 +31,7 @@
 		justify-content: center;
 		cursor: pointer;
 		overflow: hidden;
-		margin-bottom: 3rem;
+		margin-top: 3rem;
 
 		transition: all 1s ease;
 	}
@@ -79,16 +79,6 @@
 	.invisible {
 		opacity: 0;
 	}
-
-	@keyframes translateUp {
-		0% {
-			transform: translateY(0);
-		}
-		100% {
-			transform: translateY(-1rem);
-		}
-	}
-
 	@keyframes fadeIn {
 		0% {
 			opacity: 0;
