@@ -12,7 +12,7 @@
 	);
 </script>
 
-<div class="landing-section landing">
+<div class="landing-section" id="landing">
 	<div class="typewriter">
 		<Typewriter interval={0} cascade={true} on:done={showContinue} cursor={'white'}>
 			<h1>Welcome to my blog!</h1>
@@ -29,6 +29,11 @@
 </div>
 
 <style>
+	#landing {
+		align-items: center;
+		justify-content: center;
+	}
+
 	.typewriter {
 		margin-top: auto;
 	}
