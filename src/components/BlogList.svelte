@@ -1,9 +1,9 @@
-<div class="landing-section blog-list" />
+<script>
+	export let shouldShowBlogList;
+</script>
+
+<!-- this will only be scrolled to if the height is 0 -->
+<div class={shouldShowBlogList ? 'landing-section' : null} id="blog-list" />
 
 <style>
-	.blog-list {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-	}
 </style>

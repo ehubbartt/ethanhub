@@ -28,7 +28,6 @@
 
 	main {
 		padding: 1rem;
-		height: 100%;
 		height: calc(100vh - 3rem);
 	}
 </style>
