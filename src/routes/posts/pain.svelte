@@ -1,5 +1,20 @@
 <div class="landing-section">
-	<div class="content-container" />
+	<h1 class="title">pain</h1>
+	<div class="content-container">
+		<p>
+			it seeps into the deepest parts of your body. <br />
+			it makes you want to end it all. <br />
+			but worse is that I cause it. <br />
+
+			you can only feel pain if you can Love. <br />
+			a cut will heal itself eventually— <br />
+			losing someone you love is forever. <br />
+
+			You are told to come to terms. <br />
+			to cut your losses and move on. <br />
+			it’s never the same though. it never is. <br />
+		</p>
+	</div>
 </div>
 
 <style>
@@ -9,8 +24,21 @@
 	}
 
 	.content-container {
-		width: 100px;
-		height: 100px;
-		background-color: white;
+		width: max(30rem, 70%);
+		height: 50%;
+		background-color: hsla(0, 0%, 98%, 0.15);
+		border-radius: 0.5rem;
+		border: 2px solid var(--accent-color-1);
+
+		display: grid;
+		place-items: center;
+	}
+
+	p {
+		padding: 0;
+		font-size: clamp(0.9rem, 1.5vw, 2rem);
+		line-height: max(2rem, 3rem);
+		white-space: nowrap;
+		flex-shrink: 0;
 	}
 </style>
