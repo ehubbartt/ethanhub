@@ -21,7 +21,6 @@
 
 <style>
 	a {
-		color: var(--text-color);
 		top: 1rem;
 		left: 1rem;
 		position: fixed;

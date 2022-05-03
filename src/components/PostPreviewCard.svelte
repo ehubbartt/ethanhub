@@ -1,8 +1,11 @@
 <script>
 	export let post;
+
+	let title = post.title;
+	let lowerCaseTitle = title.toLowerCase();
 </script>
 
-<div class="card" tabindex="0">
+<a href={`/posts/${lowerCaseTitle}`} class="card">
 	<ul>
 		<li>
 			<h1>{post.title}</h1>
@@ -14,10 +17,10 @@
 			<p class="invisible">{post.description}</p>
 		</li>
 		<li>
-			<p class="invisible">{post.specificType}</p>
+			<p class="invisible">{`${post.genericType}: ${post.specificType}`}</p>
 		</li>
 	</ul>
-</div>
+</a>
 
 <style>
 	.card {

@@ -27,6 +27,11 @@
 		font-family: 'Roboto Mono', monospace;
 	}
 
+	:global(a) {
+		color: var(--text-color);
+		text-decoration: none;
+	}
+
 	:global(.hidden) {
 		display: none;
 	}

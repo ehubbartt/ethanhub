@@ -11,7 +11,7 @@
 <div class="landing-section" id="landing">
 	<div class="typewriter">
 		<Typewriter
-			interval={randomIntervalsGenerator(20, 100)}
+			interval={randomIntervalsGenerator(0, 0)}
 			cascade={true}
 			on:done={showContinue}
 			cursor={'white'}

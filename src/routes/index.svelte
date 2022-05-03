@@ -33,9 +33,10 @@
 
 <style>
 	:global(.landing-section) {
+		margin-top: 2rem;
 		display: flex;
 		flex-direction: column;
-		height: calc(100vh - 2rem);
+		height: calc(100vh - 4rem);
 		overflow: hidden;
 	}
 	.home {
