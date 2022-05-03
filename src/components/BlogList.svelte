@@ -1,4 +1,5 @@
 <script>
+	import { visited } from './../stores/localStorage.js';
 	import { randomIntervalsGenerator } from '../util/randomIntervalsGenerator';
 	import Typewriter from 'svelte-typewriter';
 	import PostPreviewCardList from './PostPreviewCardList.svelte';
@@ -10,6 +11,9 @@
 			shouldShowPostList = true;
 		}, 500);
 	};
+
+	const intervalMin = $visited ? 20 : 100;
+	const intervalMax = $visited ? 100 : 250;
 </script>
 
 <!-- this will only be scrolled to if the height is 0 -->
@@ -18,7 +22,7 @@
 		<Typewriter
 			delay={750}
 			cascade
-			interval={randomIntervalsGenerator(100, 250)}
+			interval={randomIntervalsGenerator(intervalMin, intervalMax)}
 			on:done={handleTypewriterDone}
 		>
 			<h1 class={shouldShowBlogList && 'underline'}>Posts</h1>
