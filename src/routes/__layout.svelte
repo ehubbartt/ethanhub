@@ -2,6 +2,7 @@
 	import ThemeWrapper from './../components/ThemeWrapper.svelte';
 	import { themeStore } from './../stores/themeStore.js';
 	import Nav from '../components/Nav.svelte';
+	import { SvelteToast } from '@zerodevx/svelte-toast';
 
 	import '../global.css';
 </script>
@@ -13,6 +14,7 @@
 >
 	<Nav />
 	<slot />
+	<SvelteToast />
 </ThemeWrapper>
 
 <style>

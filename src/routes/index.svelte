@@ -1,9 +1,9 @@
 <script>
 	import { visited } from './../stores/localStorage.js';
 	import * as animateScroll from 'svelte-scrollto';
-
 	import BlogList from '../components/BlogList.svelte';
 	import Landing from '../components/Landing.svelte';
+	import { toast } from '@zerodevx/svelte-toast';
 
 	$: shouldShowContinue = false;
 	let shouldShowBlogList = false;
@@ -15,7 +15,16 @@
 		shouldShowBlogList = true;
 	}
 
-	console.log($visited, curVisited);
+	if ($visited !== curVisited) {
+		toast.push(
+			'On subsequent visits the animation will not be shown. You can change this in settings',
+			{
+				onpop: () => {
+					toast.pop(0);
+				}
+			}
+		);
+	}
 
 	const showContinue = () => {
 		shouldShowContinue = true;
