@@ -26,20 +26,8 @@
 	};
 </script>
 
-<div class="home">
-	<Landing {showContinue} {handleContinueClick} {shouldShowContinue} />
-	<BlogList {shouldShowBlogList} />
-</div>
+<Landing {showContinue} {handleContinueClick} {shouldShowContinue} />
+<BlogList {shouldShowBlogList} />
 
 <style>
-	:global(.landing-section) {
-		margin-top: 2rem;
-		display: flex;
-		flex-direction: column;
-		height: calc(100vh - 4rem);
-		overflow: hidden;
-	}
-	.home {
-		height: 100%;
-	}
 </style>

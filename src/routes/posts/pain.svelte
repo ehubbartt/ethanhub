@@ -5,7 +5,7 @@
 <style>
 	.landing-section {
 		align-items: center;
-		justify-self: center;
+		justify-content: center;
 	}
 
 	.content-container {

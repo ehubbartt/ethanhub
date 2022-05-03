@@ -1,11 +1,17 @@
 <script>
+	import { goto } from '$app/navigation';
 	export let post;
 
 	let title = post.title;
 	let lowerCaseTitle = title.toLowerCase();
+
+	const handleNavigate = (e) => {
+		e.preventDefault();
+		goto(`/posts/${lowerCaseTitle}`);
+	};
 </script>
 
-<a href={`/posts/${lowerCaseTitle}`} class="card">
+<div on:click={handleNavigate} class="card">
 	<ul>
 		<li>
 			<h1>{post.title}</h1>
@@ -20,7 +26,7 @@
 			<p class="invisible">{`${post.genericType}: ${post.specificType}`}</p>
 		</li>
 	</ul>
-</a>
+</div>
 
 <style>
 	.card {
@@ -29,7 +35,7 @@
 		flex-direction: column;
 		border: 1px solid var(--accent-color-1);
 		border-radius: 0.5rem;
-		width: 30%;
+		width: max(20rem, 30%);
 		height: 10rem;
 		justify-content: center;
 		cursor: pointer;
@@ -60,8 +66,8 @@
 
 	.card:hover,
 	.card:focus {
-		width: 80%;
-		background-color: hsla(0, 0%, 98%, 0.147);
+		width: 60%;
+		background-color: hsla(0, 0%, 98%, 0.15);
 	}
 
 	.card:hover ul,

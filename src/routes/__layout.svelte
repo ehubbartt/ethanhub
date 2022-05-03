@@ -18,9 +18,10 @@
 		box-sizing: border-box;
 		transition: background-color 0.5s ease, color 0.5s ease;
 	}
-	:global(body) {
+	:global(body, html) {
 		margin: 0;
 		padding: 0;
+		height: 100%;
 
 		font-family: 'Poppins', sans-serif;
 		font-family: 'Roboto', sans-serif;
@@ -30,6 +31,15 @@
 	:global(a) {
 		color: var(--text-color);
 		text-decoration: none;
+	}
+
+	:global(.landing-section) {
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		height: calc(100vh - 4rem);
+		overflow: hidden;
+		width: 100%;
 	}
 
 	:global(.hidden) {
