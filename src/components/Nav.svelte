@@ -11,7 +11,7 @@
 <a class="home" href="/">
 	<HomeIcon />
 </a>
-<div class="dark-toggle" on:click={handleThemeChange}>
+<div class={$isDarkMode ? 'dark-toggle' : 'dark-toggle rotate'} on:click={handleThemeChange}>
 	{#if $isDarkMode}
 		<SunIcon />
 	{:else}
@@ -33,5 +33,10 @@
 		top: 1rem;
 		right: 1rem;
 		position: fixed;
+		transition: all 0.5s ease;
+	}
+
+	.rotate {
+		transform: rotate(360deg);
 	}
 </style>
