@@ -7,13 +7,15 @@
 
 	$: shouldShowContinue = false;
 	let shouldShowBlogList = false;
-	const curVisited = $visited;
+	const curVisited = $visited || false;
 
 	if (!curVisited) {
 		visited.set(true);
 	} else {
 		shouldShowBlogList = true;
 	}
+
+	console.log($visited, curVisited);
 
 	const showContinue = () => {
 		shouldShowContinue = true;
