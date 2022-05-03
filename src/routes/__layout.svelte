@@ -16,7 +16,7 @@
 <style>
 	:global(*) {
 		box-sizing: border-box;
-		transition: background-color 0.5s ease, color 0.5s ease;
+		transition: background-color 0.5s ease;
 	}
 	:global(body, html) {
 		margin: 0;
