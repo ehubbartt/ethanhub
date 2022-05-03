@@ -24,7 +24,7 @@
 		padding: 1rem;
 		display: flex;
 		flex-direction: column;
-		border: 1px solid #eaeaea;
+		border: 1px solid var(--accent-color-1);
 		border-radius: 0.5rem;
 		width: 30%;
 		height: 10rem;
@@ -34,6 +34,10 @@
 		margin-top: 3rem;
 
 		transition: all 1s ease;
+	}
+
+	h1 {
+		color: var(--accent-color-1);
 	}
 
 	ul {

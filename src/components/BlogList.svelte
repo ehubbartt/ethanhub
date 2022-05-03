@@ -50,7 +50,7 @@
 	.underline::after {
 		content: '' !important;
 		height: 2px;
-		background: whitesmoke;
+		background: var(--accent-color-1);
 		position: absolute;
 		bottom: -3px;
 		left: 0;

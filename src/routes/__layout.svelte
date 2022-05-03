@@ -1,33 +1,33 @@
 <script>
+	import ThemeWrapper from './../components/ThemeWrapper.svelte';
+	import { themeStore } from './../stores/themeStore.js';
 	import Nav from '../components/Nav.svelte';
 </script>
 
-<main>
+<ThemeWrapper
+	--background-color={$themeStore.backgroundColor}
+	--text-color={$themeStore.textColor}
+	--accent-color-1={$themeStore.accentColor1}
+>
 	<Nav />
 	<slot />
-</main>
+</ThemeWrapper>
 
 <style>
 	:global(*) {
 		box-sizing: border-box;
+		transition: background-color 0.5s ease, color 0.5s ease;
 	}
 	:global(body) {
 		margin: 0;
 		padding: 0;
-		background-image: url('../assets/background.svg');
 
 		font-family: 'Poppins', sans-serif;
 		font-family: 'Roboto', sans-serif;
 		font-family: 'Roboto Mono', monospace;
-		color: whitesmoke;
 	}
 
 	:global(.hidden) {
 		display: none;
-	}
-
-	main {
-		padding: 1rem;
-		height: calc(100vh - 3rem);
 	}
 </style>
