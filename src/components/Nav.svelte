@@ -1,10 +1,15 @@
 <script>
 	import { darkTheme, lightTheme } from './../constants/defaultThemes.js';
 	import { themeStore, isDarkMode } from './../stores/themeStore.js';
-	import { HomeIcon, MoonIcon, SunIcon } from 'svelte-feather-icons';
+	import { HomeIcon, MoonIcon, SunIcon, SettingsIcon } from 'svelte-feather-icons';
+	import { isModalOpen } from '../stores/modalStore.js';
 
 	const handleThemeChange = () => {
 		$isDarkMode ? themeStore.set(lightTheme) : themeStore.set(darkTheme);
+	};
+
+	const handleSettingsClick = () => {
+		isModalOpen.set(true);
 	};
 </script>
 
@@ -17,6 +22,9 @@
 	{:else}
 		<MoonIcon />
 	{/if}
+</div>
+<div class="settings" on:click={handleSettingsClick}>
+	<SettingsIcon />
 </div>
 
 <style>
@@ -37,5 +45,12 @@
 
 	.rotate {
 		transform: rotate(360deg);
+	}
+
+	.settings {
+		top: 1rem;
+		right: 4rem;
+		position: fixed;
+		cursor: pointer;
 	}
 </style>
