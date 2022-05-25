@@ -55,19 +55,19 @@
 	}
 
 	.animate-right {
-		animation: right 0.5s ease forwards;
+		animation: right 0.3s ease forwards;
 	}
 
 	.animate-left {
-		animation: left 0.5s ease forwards;
+		animation: left 0.3s ease forwards;
 	}
 
 	.on {
-		right: 0.5rem;
+		right: 0.3rem;
 	}
 
 	.off {
-		left: 0.5rem;
+		left: 0.3rem;
 	}
 
 	@keyframes right {
