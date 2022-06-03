@@ -23,10 +23,10 @@
 		<MoonIcon />
 	{/if}
 </div>
-<div class="settings" on:click={handleSettingsClick}>
-	<SettingsIcon />
-</div>
 
+<!-- <div class="settings" on:click={handleSettingsClick}>
+	<SettingsIcon />
+</div> -->
 <style>
 	a {
 		top: 1rem;

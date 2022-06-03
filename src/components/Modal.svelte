@@ -17,7 +17,7 @@
 	$: isAnimationEnabled = false;
 </script>
 
-<dialog bind:this={modal}>
+<dialog bind:this={modal} class="hidden">
 	<h1>Settings</h1>
 	<Toggle bind:toggleValue={isAnimationEnabled} />
 	<p>{isAnimationEnabled}</p>
