@@ -17,17 +17,17 @@
 
 	const showContinue = () => {
 		shouldShowContinue = true;
-
-		if ($visited !== curVisited) {
-			toast.push(
-				'On subsequent visits the animation will not be shown. You can change this in settings',
-				{
-					onpop: () => {
-						toast.pop(0);
-					}
-				}
-			);
-		}
+		//TODO: re implement this when settings is here
+		// if ($visited !== curVisited) {
+		// 	toast.push(
+		// 		'On subsequent visits the animation will not be shown. You can change this in settings',
+		// 		{
+		// 			onpop: () => {
+		// 				toast.pop(0);
+		// 			}
+		// 		}
+		// 	);
+		// }
 	};
 
 	const handleContinueClick = () => {
