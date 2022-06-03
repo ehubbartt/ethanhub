@@ -21,5 +21,8 @@
     "svelte-scrollto": "^0.2.0",
     "svelte-typewriter": "^3.0.0-alpha.11"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "npm": "^8.12.1"
+  }
 }
