@@ -2,7 +2,7 @@
 	import { randomIntervalsGenerator } from './../util/randomIntervalsGenerator.js';
 	import Typewriter from 'svelte-typewriter';
 	import { ArrowDownIcon } from 'svelte-feather-icons';
-
+	import { themeStore } from './../stores/themeStore.js';
 	export let showContinue;
 	export let handleContinueClick;
 	export let shouldShowContinue;
@@ -14,7 +14,7 @@
 			interval={randomIntervalsGenerator(20, 100)}
 			cascade={true}
 			on:done={showContinue}
-			cursor={'white'}
+			cursor={$themeStore.textColor}
 		>
 			<h1>Welcome to my blog!</h1>
 			<h2>You can find interactive poems and other content here.</h2>

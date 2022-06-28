@@ -25,7 +25,7 @@
 
 	.content-container {
 		width: max(30rem, 70%);
-		height: 50%;
+		height: max(50%, 35rem);
 		background-color: hsla(0, 0%, 98%, 0.15);
 		border-radius: 0.5rem;
 		border: 2px solid var(--accent-color-1);
