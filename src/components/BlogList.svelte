@@ -1,4 +1,5 @@
 <script>
+	import { themeStore } from './../stores/themeStore.js';
 	import { visited } from './../stores/localStorage.js';
 	import { randomIntervalsGenerator } from '../util/randomIntervalsGenerator';
 	import Typewriter from 'svelte-typewriter';
@@ -12,6 +13,8 @@
 		}, 500);
 	};
 
+	console.log($themeStore.textColor)
+
 	const intervalMin = $visited ? 20 : 100;
 	const intervalMax = $visited ? 100 : 250;
 </script>
@@ -22,6 +25,7 @@
 		<Typewriter
 			delay={750}
 			cascade
+			cursor={$themeStore.textColor}
 			interval={randomIntervalsGenerator(intervalMin, intervalMax)}
 			on:done={handleTypewriterDone}
 		>

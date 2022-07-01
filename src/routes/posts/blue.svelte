@@ -1,7 +1,7 @@
 <div class="landing-section">
 	<h1 class="title">Blue</h1>
 	<div class="content-container">
-		<p>
+		<p class="poem-text">
 			There is something about ubiquity that is scary <br />
 			A single color that stretches from the depths of the ocean <br />
 			to the highest point in the sky <br />
@@ -30,9 +30,20 @@
 		padding: 2rem;
 	}
 
-	p {
+	@media (max-width: 768px) {
+		.content-container {
+			width: 100%;
+			padding: 0.25rem;
+		}
+
+		.poem-text {
+			font-size: 0.5rem;
+		}
+	}
+
+	.poem-text {
 		padding: 0;
-		font-size: clamp(0.75rem, 1.5vw, 2rem);
+		font-size: clamp(0.55rem, 1.5vw, 2rem);
 		line-height: max(2rem, 3rem);
 		white-space: nowrap;
 		flex-shrink: 0;

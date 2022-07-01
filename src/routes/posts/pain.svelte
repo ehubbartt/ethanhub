@@ -34,9 +34,16 @@
 		place-items: center;
 	}
 
+		@media (max-width: 768px) {
+		.content-container {
+			width: 100%;
+			padding: 0.25rem;
+		}
+	}
+
 	p {
 		padding: 0;
-		font-size: clamp(0.9rem, 1.5vw, 2rem);
+		font-size: clamp(0.7rem, 1.5vw, 2rem);
 		line-height: max(2rem, 3rem);
 		white-space: nowrap;
 		flex-shrink: 0;
